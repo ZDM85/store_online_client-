@@ -1,0 +1,115 @@
+@import "../../../../utils/utils";
+
+.delete-role {
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(194, 188, 188, 0.6);
+    @include d_flex(flex, center, center, none);
+  }
+  &__label {
+    display: block;
+    margin: 0 0 20px;
+    position: relative;
+    &-box {
+      margin-left: 10px;
+      display: inline-block;
+      position: relative;
+    }
+    span {
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid #000;
+      padding: 2px;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        margin: 0 7px;
+        height: 8px;
+        background: url("../../../../assets/img/arrow-down.svg") 0 0 / cover
+          no-repeat;
+      }
+    }
+    &-list {
+      background: #d6d3d3;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 2px;
+      z-index: 1;
+    }
+    &-item {
+      cursor: pointer;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+  &__content {
+    border-radius: 15px;
+    width: 500px;
+    background: #fff;
+    padding: 30px;
+    @include d_flex(flex, none, none, column);
+  }
+  &__header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__close {
+    @extend %btn;
+    transition: all 0.3s;
+    font-weight: 700;
+    &:hover {
+      background: #d53030;
+      color: #fff;
+    }
+  }
+  input {
+    margin-bottom: 20px;
+  }
+  &__info {
+    &-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    &-item {
+      margin: 20px 0;
+      input {
+        margin: 0 10px 0 0;
+      }
+      @include d_flex(flex, none, none, none);
+    }
+    &-btn {
+      margin-top: 20px;
+      @extend %btn;
+    }
+    &-delete {
+      @extend %btn;
+      transition: all 0.3s;
+      &:hover {
+        background: #d53030;
+        color: #fff;
+      }
+    }
+  }
+  &__btn {
+    @extend %btn;
+    align-self: flex-end;
+    transition: all 0.3s;
+    font-weight: 700;
+    &:hover {
+      background: #c9c0c0;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../utils/utils";
+
+.navbar {
+  height: 50px;
+  background: $c_back;
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    @include text_style($fw, 25px, $color);
+  }
+  &__authorization {
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  &__admin {
+    cursor: pointer;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    @include text_style(400, 18px, $color);
+  }
+  &__basket {
+    cursor: pointer;
+    margin: 0 19px;
+    width: 32px;
+    height: 29px;
+    background: url("../../assets/img/basket.svg") 0 0 / cover no-repeat;
+  }
+  &__exit {
+    cursor: pointer;
+    @extend %btn;
+    padding: 0;
+    border: none;
+    transition: all 0.3s;
+    &:hover {
+      color: #d31c1c;
+    }
+  }
+}

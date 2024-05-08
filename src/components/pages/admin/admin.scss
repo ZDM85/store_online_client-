@@ -1,0 +1,50 @@
+@import "../../../utils/utils";
+
+.admin {
+  &__inner {
+    @include d_flex(flex, none, none, column);
+    margin: 196px 119px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__role {
+    margin-bottom: 30px;
+  }
+  &__body {
+    max-width: 650px;
+  }
+  &__col {
+    @include d_flex(flex, center, space-between, none);
+  }
+  &__btn {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    background: #cac6c6;
+    cursor: pointer;
+    padding: 18px 27px;
+    text-align: center;
+    margin-bottom: 30px;
+    @include text_style(400, 24px, $color);
+    transition: all 0.3s;
+    &:hover {
+      color: #bf1f1f;
+      transform: scale(1.01);
+    }
+    &--create {
+      margin-right: 20px;
+    }
+    &-remove {
+      margin-left: 20px;
+      margin-bottom: 30px;
+      background: #e1dede;
+      transition: all 0.3s;
+      &:hover {
+        background: #d53030;
+        color: #fff;
+      }
+    }
+  }
+}

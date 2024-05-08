@@ -1,0 +1,46 @@
+@import "../../../utils/utils";
+
+.basket {
+  margin-top: 30px;
+  &__header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(3, 1fr);
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000;
+  }
+}
+
+.basket-item {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(3, 1fr);
+    text-align: center;
+    border-bottom: 2px solid #000;
+    align-items: center;
+    transition: all 0.3s;
+    &:hover {
+      scale: 1.01;
+    }
+    img {
+      justify-self: center;
+      margin: 5px 0;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+  &__delete {
+    cursor: pointer;
+    @extend %btn;
+    &:hover {
+      transition: all 0.3s;
+      background: #d53030;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../utils";
+
+input {
+  @include text_style(400, 18px, $color);
+  border: 1px solid #000;
+  background: transparent;
+  padding: 13px 23px;
+  margin-bottom: 12px;
+  width: 100%;
+  outline: none;
+  &:focus {
+    transform: scale(1.01);
+  }
+  &::placeholder {
+    @include text_style(400, 18px, $color);
+  }
+}

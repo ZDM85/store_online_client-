@@ -1,0 +1,47 @@
+@import "../../../utils/utils";
+
+.create-type {
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(194, 188, 188, 0.6);
+    @include d_flex(flex, center, center, none);
+  }
+  &__content {
+    border-radius: 15px;
+    width: 500px;
+    background: #fff;
+    padding: 30px;
+    @include d_flex(flex, none, none, column);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__close {
+    @extend %btn;
+    transition: all 0.3s;
+    font-weight: 700;
+    &:hover {
+      background: #d53030;
+      color: #fff;
+    }
+  }
+  input {
+    margin: 30px 0;
+  }
+  &__btn {
+    @extend %btn;
+    align-self: flex-end;
+    transition: all 0.3s;
+    font-weight: 700;
+    &:hover {
+      background: #c9c0c0;
+      color: #fff;
+    }
+  }
+}

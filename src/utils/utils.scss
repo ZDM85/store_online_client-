@@ -1,0 +1,28 @@
+$c_back: #c4c4c4;
+$c_app: #f4ecec;
+$fw: 700;
+$fs: 16px;
+$color: #000;
+
+%btn {
+  border: 1px solid #000;
+  background: transparent;
+  font-weight: 400;
+  font-size: 18px;
+  color: $color;
+  padding: 12px 23px;
+  cursor: pointer;
+}
+
+@mixin d_flex($fl, $ai, $jc, $fd) {
+  display: $fl;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
+
+@mixin text_style($fw, $fs, $c) {
+  font-weight: $fw;
+  font-size: $fs;
+  color: $c;
+}

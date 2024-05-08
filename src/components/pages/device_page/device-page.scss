@@ -1,0 +1,75 @@
+@import "../../../utils/utils";
+
+.device-page {
+  background: rgba(196, 196, 196, 0.2);
+  padding: 30px 0;
+  &__body {
+    @include d_flex(flex, none, space-between, none);
+  }
+  &__col {
+    @include d_flex(flex, none, none, column);
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include text_style(400, 32px, $color);
+  }
+  &__star {
+    @include d_flex(flex, center, center, none);
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/img/StarBig.svg") center center / contain
+      no-repeat;
+    span {
+      @include text_style(400, 48px, $color);
+    }
+  }
+  &__box {
+    @include text_style(400, 32px, $color);
+    padding: 0 30px;
+    @include d_flex(flex, none, space-around, column);
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+  &__btn {
+    padding: 4px 10px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #aba1a1;
+    transition: all 1.1s;
+    border-radius: 4px;
+    @include text_style(400, 32px, $color);
+    cursor: pointer;
+    &:hover {
+      background: #e7e3e3;
+      color: #962828;
+      transition: all 0.3s;
+    }
+  }
+  &__row {
+    padding: 30px 0;
+    &-title {
+      @include text_style(400, 32px, $color);
+      margin-bottom: 20px;
+    }
+    &-item {
+      list-style: none;
+      @include text_style(400, 20px, $color);
+      padding: 10px 16px 6px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:nth-child(odd) {
+        padding: 11px 16px;
+        background-color: #fff;
+      }
+    }
+  }
+}

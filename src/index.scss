@@ -1,0 +1,39 @@
+@import "./utils/utils";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+#root {
+  width: 100%;
+}
+
+body {
+  background: $c_app;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.navlink {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s;
+  &:hover {
+    color: #d31c1c;
+  }
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  color: $color;
+  text-decoration: none;
+}
